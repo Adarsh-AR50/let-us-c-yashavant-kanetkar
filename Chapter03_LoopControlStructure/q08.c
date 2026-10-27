@@ -7,7 +7,7 @@ Write a program to receive an integer and find its octal equivalent.
 int main ()
 {
     int num, rem;
-    int octal = 0, reverse = 0;
+    int octal = 0;
     int place = 1;
 
     printf("Enter a number: ");
@@ -21,7 +21,7 @@ int main ()
         num /= 8;
     }
 
-    printf("The octal value of the given number is: %d\n",reverse);
+    printf("The octal value of the given number is: %d\n",octal);
     
     return 0;
 }
