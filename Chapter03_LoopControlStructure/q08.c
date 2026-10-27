@@ -8,22 +8,17 @@ int main ()
 {
     int num, rem;
     int octal = 0, reverse = 0;
+    int place = 1;
 
     printf("Enter a number: ");
     scanf("%d",&num);
 
     while(num != 0)
     {
-        rem = num%8;
-        octal = 10 * octal + rem;
+        rem = num % 8;
+        octal = octal + rem * place;
+        place *= 10;
         num /= 8;
-    }
-
-    while(octal != 0)
-    {
-        rem = octal % 10;
-        reverse = 10 * reverse + rem;
-        octal /= 10;
     }
 
     printf("The octal value of the given number is: %d\n",reverse);
